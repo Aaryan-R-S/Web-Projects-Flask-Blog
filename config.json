@@ -1,0 +1,21 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/flaskblog",
+        "prod_uri": "mysql://username:password@localhost/db_name",
+        "blog_name": "Flask Blog",
+        "blog_author": "Aaryan Ars",
+        "gmail_id": "your-gmail-id",
+        "gmail_pwd": "your-gmail-pwd",
+        "fb_url": "https://facebook.com/flaskblog",
+        "twitter_url": "https://twitter.com/flaskblog",
+        "github_url": "https://github.com/flaskblog",
+        "no_of_posts":3,
+        "admins":{
+            "aaryan_ars":"7355",
+            "harry_ali":"7564"
+        },
+        "upload_location":"enter-full-path-here",
+        "about_me":"\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?\n\nLorem ipsum dolor sit amet  consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!\n\n Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!"
+    }
+}

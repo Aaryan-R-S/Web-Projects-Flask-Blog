@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<header id="t" class="masthead"
+  style="background-image: url('    {{ url_for ('static', filename = 'img/allposts.jpg')}}       ')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>All Posts</h1>
+          <span class="subheading">A Blog by {{params['blog_author']}} using Flask named {{params['blog_name']}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      
+      {% for post in post_all %}
+
+      <div class="post-preview">
+        <a href="/posts/{{post.slug}}">
+          <h2 class="post-title">
+            {{post.title}}
+          </h2>
+          <h3 class="post-subtitle">
+            About {{post.topic}}
+          </h3>
+        </a>
+        <p>
+          {{post.content[0:400]}}...
+        </p>
+        <p class="post-meta">Posted by {{post.author}} on {{post.date}}
+        </p>
+      </div>
+      <hr>
+
+      {% endfor %}
+
+
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#t">Go to Top &nbsp; &#8593;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+{% endblock %}

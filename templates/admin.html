@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- Page Header -->
+<header class="masthead"
+    style="background-image: url('    {{ url_for ('static', filename = 'img/admin.jpg')}}       ')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Welcome Admin : {{admin}} !</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+            {% with messages = get_flashed_messages(with_categories = True) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div style="text-align: center;position: absolute; top:-500px; left: 200px;" class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+              <strong>{{message}}</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            <hr>
+            <h1>Add or Edit Posts</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Post.No.</th>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <a href="/edit/post-new"><button class="btn btn-success center mb-3">New Post</button></a>
+                    </tr>
+                    {% for post in posts %}
+                        <tr>
+                            <td>{{post.sno}}</td>
+                            <td>{{post.title}}</td>
+                            <td>{{post.date}}</td>
+                            <td><a href="/edit/{{post.slug}}"><button class="btn btn-warning"> Edit</button></a></td>
+                            <td><a onclick="return confirm('Are you sure you want to delete this post?');" href="/delete/{{post.slug}}"><button class="btn btn-danger">Delete</button></a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <hr>
+            <h1>Upload a File</h1>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input class="btn" type="file"  accept="image/*" name="u" id="u">
+                <button type="submit" onclick="return confirm('Are you sure you want to upload the file?');" class="btn btn-success">Upload</button>
+            </form>
+            <a style="position: fixed; bottom:20px;right:50px;" class="btn btn-info float-right" onclick="return confirm('Are you sure you want to log out from the panel?');" href="/logout">Log Out &rarr;</a>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+
+{% endblock %}
