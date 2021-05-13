@@ -120,7 +120,7 @@ Email ID - aaryan20004@iiitd.ac.in
 * [Python Tutorial @Code With Harry](https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME)
 * [Web Development Bootcamp @Code with Harry](https://youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
-* [Bootstrap](https://startbootstrap.com/theme/clean-blog)
+* [Bootstrap Template](https://startbootstrap.com/theme/clean-blog)
 * [Flaticon](https://flaticon.com)
 
 
