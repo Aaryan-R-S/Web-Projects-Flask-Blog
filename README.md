@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/Aaryan-R-S/Web-Projects-Flask-Blog">
-    <img src="readme-images/logo.png" alt="Logo" width="80" height="80">
+    <img src="readme-images/logos.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Flask Blog</h3>
